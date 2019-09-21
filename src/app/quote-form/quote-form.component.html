@@ -1,0 +1,27 @@
+<section>
+    <p>Before adding a new quote please first do a search and make sure it doesn't already exist in the database.</p>
+    <form>
+      <div>
+        <label for="quote">quote&nbsp;<span>(No need for quotation marks)</span></label>
+        <textarea name="quote" id="quoteText" rows="4" required></textarea>
+      </div>
+    
+      <div>
+        <label for="author">author&nbsp;<span>(Start typing for auto-complete. Only put the name please.)</span></label>
+        <input type="text" name="author" id="author" required>
+      </div>
+    
+      <div>
+        <label for="tags">tags&nbsp;<span>(Comma separated: inspirational, science, tech, humor etc. Limit 10)</span></label>
+        <input type="text" name="tags" id="tags" required>
+      </div>
+
+      <div>
+        <label for="submitter">submitter&nbsp;<span>(Your name.)</span></label>
+        <input type="text" name="submitter" id="submitter">
+      </div>
+      
+      <button type="submit">Post Quote</button>
+      
+    </form>
+</section>
