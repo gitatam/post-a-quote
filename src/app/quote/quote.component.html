@@ -1,5 +1,7 @@
 <section class = "quoteText" >
-  <p>The Technology you use impresses no one, The Experience you create with it is everything.</p>
+  <h3 *ngFor = 'let quote of quotes'>
+    {{quote.quote}}
+  </h3>
 </section>
 
 <section class="quoteDetails">
