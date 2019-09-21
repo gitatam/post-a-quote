@@ -1,6 +1,6 @@
 <section>
     <p>Before adding a new quote please first do a search and make sure it doesn't already exist in the database.</p>
-    <form>
+    <form (ngSubmit) = 'submitQuote()'>
       <div>
         <label for="quote">quote&nbsp;<span>(No need for quotation marks)</span></label>
         <textarea name="quote" id="quoteText" rows="4" required></textarea>
