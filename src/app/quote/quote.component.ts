@@ -57,7 +57,7 @@ export class QuoteComponent implements OnInit {
   toggleAddQuote() {
     const quoteForm = document.getElementById('quoteForm');
     if (quoteForm.style.display === 'none') {
-      document.getElementById('addQuote').innerText = 'Hide quote posting form.';
+      document.getElementById('addQuote').innerText = 'View already uploaded quotes';
       quoteForm.style.display = 'block';
     } else {
       document.getElementById('addQuote').innerText = 'Proceed to posting a quote.';

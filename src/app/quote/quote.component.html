@@ -1,6 +1,9 @@
 <section class="toggleCreateButton">
   <button id="addQuote" (click)  = 'toggleAddQuote()'>Proceed to posting a quote.</button>
 </section>
+<section class="quoteForm" id="quoteForm" style="display: none">
+  <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+</section>
 <section class="quote" *ngFor = 'let quote of quotes'>
     <section class = "quoteText" >
         <h3>
@@ -11,8 +14,4 @@
       <section class="quoteDetails">
         <app-quote-detail [quote] = 'quote' (isTerrible) = 'terribleQuote($event)'></app-quote-detail>
       </section>
-</section>
-
-<section class="quoteForm" id="quoteForm" style="display: none">
-    <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
 </section>
