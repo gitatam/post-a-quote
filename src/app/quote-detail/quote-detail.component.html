@@ -2,14 +2,12 @@
 
   <div class="quoteMetadata">
       <h3>{{quote.author}}</h3>
-      <h4>Upvotes: <span> {{quote.upvotes}} </span></h4>
-      <h4>Downvotes: <span> {{quote.downvotes}} </span></h4>
   </div>
 
   <div class="tools">
-    <button class = "upvote">upvote</button>&nbsp;&nbsp;&nbsp;
-    <button class = "downvote">downvote</button>&nbsp;&nbsp;&nbsp;
-    <button (click) = 'quoteTerrible(true)' class = "delete">delete</button>
+    <button (click) = 'upvoteQuote()' id="upvote" class = "upvote">upvote: {{quote.upvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'downvoteQuote()' id="downvote" class = "downvote">downvote: {{quote.downvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'deleteQuote(true)' class = "delete">delete</button>
   </div>
 
   <div class="quoteTags">tags:&nbsp;
