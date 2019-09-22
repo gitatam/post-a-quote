@@ -27,7 +27,7 @@
 
       <div>
         <label for="submitter">submitter&nbsp;<span>(Your name. Otherwise defaults to anonymous.)</span></label>
-        <input type="text" name="submitter" id="submitter">
+        <input type="text" name="submitter" id="submitter" [(ngModel)] = 'newQuote.submitter'>
       </div>
       
       <button type="submit">Post Quote</button>
