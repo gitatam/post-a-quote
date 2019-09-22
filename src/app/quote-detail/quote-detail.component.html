@@ -1,3 +1,8 @@
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' 
+  integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
+  crossorigin='anonymous'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <section>
 
   <div class="quoteMetadata">
@@ -5,9 +10,9 @@
   </div>
 
   <div class="tools">
-    <button (click) = 'upvoteQuote()' id="upvote" class = "upvote">upvote: {{quote.upvotes}}</button>&nbsp;&nbsp;&nbsp;
-    <button (click) = 'downvoteQuote()' id="downvote" class = "downvote">downvote: {{quote.downvotes}}</button>&nbsp;&nbsp;&nbsp;
-    <button (click) = 'deleteQuote(true)' class = "delete">delete</button>
+    <button (click) = 'upvoteQuote()' id="upvote" class = "upvote">upvote <i class='fas fa-angle-up'></i> {{quote.upvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'downvoteQuote()' id="downvote" class = "downvote">downvote <i class='fas fa-angle-down'></i> {{quote.downvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'deleteQuote(true)' class = "delete">delete <i class="fa fa-remove"></i></button>
   </div>
 
   <div class="quoteTags">tags:&nbsp;
