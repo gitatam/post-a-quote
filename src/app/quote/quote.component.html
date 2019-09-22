@@ -1,11 +1,13 @@
-<section class = "quoteText" >
-  <h3 *ngFor = 'let quote of quotes'>
-    {{quote.quote}}
-  </h3>
-</section>
-
-<section class="quoteDetails">
-  <app-quote-detail></app-quote-detail>
+<section class="quote" *ngFor = 'let quote of quotes'>
+    <section class = "quoteText" >
+        <h3>
+          {{quote.quote}}
+        </h3>
+      </section>
+      
+      <section class="quoteDetails">
+        <app-quote-detail [quote] = 'quote'></app-quote-detail>
+      </section>
 </section>
 
 <section class="quoteForm">

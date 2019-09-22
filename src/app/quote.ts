@@ -1,6 +1,6 @@
 export class Quote {
-  public submitter: boolean;
+  public submitter: string;
   constructor(public quote: string, public author: string, public votes: number, public tag: string) {
-    this.submitter = false;
+    this.submitter = 'anonymous';
   }
 }

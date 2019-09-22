@@ -1,18 +1,22 @@
 <section>
-  <div class="">
-      <h3>&#8212;&nbsp;Sean Gerety</h3>
+
+  <div class="quoteMetadata">
+      <h3>{{quote.author}}</h3>
       <h4>Upvotes: <span>0</span></h4>
       <h4>Downvotes: <span>0</span></h4>
   </div>
+
   <div class="tools">
     <a class = "upvote">upvote</a>&nbsp;&nbsp;&nbsp;
     <a class = "downvote">downvote</a>
   </div>
+
   <div class="quoteTags">tags:&nbsp;
-    <span>Tech, Witty, Great, Technology, Design</span>
+    <span>{{quote.tag}}</span>
   </div>
-  <div class="quoteLikes">
-      <a class = "downvote">0 <span>likes</span></a>
+
+  <div class="submitter">
+      <p>submitted by: <a>{{quote.submitter}}</a></p>
   </div>
 
 </section>
