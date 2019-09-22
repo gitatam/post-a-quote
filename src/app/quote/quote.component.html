@@ -9,7 +9,7 @@
       </section>
       
       <section class="quoteDetails">
-        <app-quote-detail [quote] = 'quote'></app-quote-detail>
+        <app-quote-detail [quote] = 'quote' (isTerrible) = 'terribleQuote($event)'></app-quote-detail>
       </section>
 </section>
 

@@ -14,6 +14,12 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
+  terribleQuote(isTerrible) {
+    if (isTerrible) {
+      this.quotes.pop();
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
