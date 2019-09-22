@@ -1,3 +1,6 @@
+<section class="toggleCreateButton">
+  <button id="addQuote" (click)  = 'toggleAddQuote()'>Proceed to posting a quote.</button>
+</section>
 <section class="quote" *ngFor = 'let quote of quotes'>
     <section class = "quoteText" >
         <h3>
@@ -10,6 +13,6 @@
       </section>
 </section>
 
-<section class="quoteForm">
+<section class="quoteForm" id="quoteForm" style="display: none">
     <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
 </section>

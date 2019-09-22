@@ -19,4 +19,15 @@ export class QuoteComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleAddQuote() {
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm.style.display === 'none') {
+      document.getElementById('addQuote').innerText = 'Hide quote posting form.';
+      quoteForm.style.display = 'block';
+    } else {
+      document.getElementById('addQuote').innerText = 'Proceed to posting a quote.';
+      quoteForm.style.display = 'none';
+    }
+  }
+
 }
