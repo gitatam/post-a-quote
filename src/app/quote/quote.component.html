@@ -18,7 +18,7 @@
   </section>
   <div>
     <section class="quoteForm" id="quoteForm" style="display: none">
-      <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+      <app-quote-form (addQuote) = "addNewQuote($event, i)"></app-quote-form>
     </section>
   </div>
   <!-- end of form and form toggler  -->
@@ -32,7 +32,7 @@
           </h4>
         </div> <!-- end card body -->
         <div class="card-footer quoteDetails">
-            <app-quote-detail [quote] = 'quote' (isTerrible) = 'terribleQuote($event)'></app-quote-detail>
+            <app-quote-detail [quote] = 'quote'></app-quote-detail>
         </div> <!-- end card footer-->
       </div> <!-- end card -->
   </section>

@@ -11,20 +11,20 @@ export class QuoteDetailComponent implements OnInit {
   @Input()  quote: Quote;
   @Output() isTerrible =  new EventEmitter<boolean>();
 
+  upvote = 0;
+  downvote = 0;
+  increasedUpvote: number;
+  decreasedDownvote: number;
   upvoteQuote() {
-    const upvotebtn = document.getElementById('upvote');
-    console.log('You clicked me');
-    // TODO: implement function handle upvotes
+    this.increasedUpvote = this.upvote++;
   }
 
   downvoteQuote() {
-    const downvotebtn = document.getElementById('downvote');
-    console.log('You clicked me');
-    // TODO: implement function handle downvotes
+    this.decreasedDownvote = this.downvote++;
   }
 
-  deleteQuote(terrible: boolean) {
-    this.isTerrible.emit(terrible);
+  deleteQuote() {
+    console.log('You clicked me');
   }
 
   constructor() { }
