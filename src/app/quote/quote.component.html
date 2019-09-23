@@ -1,23 +1,35 @@
 <section class="container">
 
+  <!-- start navbar -->
+  <nav class="navbar navbar-expand-sm">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">Home</a>
+      <a class="nav-item nav-link" href="#">Authors</a>
+      <a class="nav-item nav-link" href="#">Quotes</a>
+      <a class="nav-item nav-link" href="#">Collections</a>
+      <a class="nav-item nav-link" href="#">Topics</a>
+  </div>
+  </nav>
+  <!-- end navbar -->
+
   <!-- start of form and form toggler -->
-    <div class="text-center">
-        <section class="toggleCreateButton">
-          <button id="addQuote" (click)  = 'toggleAddQuote()'>Proceed to posting a quote.</button>
-        </section>
-        <section class="quoteForm" id="quoteForm" style="display: none">
-          <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
-        </section>
-    </div>
+  <section class="toggleCreateButton text-md-center text-xl-right sticky-top m-2">
+    <button class="btn btn-warning text-capitalize" id="addQuote" (click)  = 'toggleAddQuote()'>Proceed to post a quote.</button>
+  </section>
+  <div>
+    <section class="quoteForm" id="quoteForm" style="display: none">
+      <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+    </section>
+  </div>
   <!-- end of form and form toggler  -->
  
   <!-- start of quote cards -->
   <section *ngFor = 'let quote of quotes'>
       <div class="card quoteText mb-5 border-warning">
         <div class="card-body">
-          <h3 class="card-text text-left text-lg-center">
+          <h4 class="card-text text-left text-lg-center">
             {{quote.quote}}
-          </h3>
+          </h4>
         </div> <!-- end card body -->
         <div class="card-footer quoteDetails">
             <app-quote-detail [quote] = 'quote' (isTerrible) = 'terribleQuote($event)'></app-quote-detail>

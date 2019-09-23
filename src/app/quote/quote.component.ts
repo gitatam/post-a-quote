@@ -59,8 +59,9 @@ export class QuoteComponent implements OnInit {
     if (quoteForm.style.display === 'none') {
       document.getElementById('addQuote').innerText = 'View already uploaded quotes';
       quoteForm.style.display = 'block';
+      scroll(0, 0);
     } else {
-      document.getElementById('addQuote').innerText = 'Proceed to posting a quote.';
+      document.getElementById('addQuote').innerText = 'Proceed to post a quote.';
       quoteForm.style.display = 'none';
     }
   }

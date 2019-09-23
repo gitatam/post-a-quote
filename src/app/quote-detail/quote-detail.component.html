@@ -6,21 +6,21 @@
 <section>
 
   <div class="quoteMetadata">
-      <h3>{{quote.author}}</h3>
+      <h5> <span class="d-sm-inline-block">&#8211;</span> <span class="d-none d-md-inline-block">&#8212;</span>&nbsp;{{quote.author}}</h5>
   </div>
 
   <div class="tools">
-    <button (click) = 'upvoteQuote()' id="upvote" class = "upvote">upvote <i class='fas fa-angle-up'></i> {{quote.upvotes}}</button>&nbsp;&nbsp;&nbsp;
-    <button (click) = 'downvoteQuote()' id="downvote" class = "downvote">downvote <i class='fas fa-angle-down'></i> {{quote.downvotes}}</button>&nbsp;&nbsp;&nbsp;
-    <button (click) = 'deleteQuote(true)' class = "delete">delete <i class="fa fa-remove"></i></button>
+    <button (click) = 'upvoteQuote()' id="upvote" class = "upvote btn-success">upvote <i class='fas fa-angle-up'></i> {{quote.upvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'downvoteQuote()' id="downvote" class = "downvote bg-dark text-white">downvote <i class='fas fa-angle-down'></i> {{quote.downvotes}}</button>&nbsp;&nbsp;&nbsp;
+    <button (click) = 'deleteQuote(true)' class = "delete bg-danger text-white">delete <i class="fa fa-remove"></i></button>
   </div>
 
   <div class="quoteTags">tags:&nbsp;
-    <span>{{quote.tag}}</span>
+    <span><a class="text-info" href="">{{quote.tag}}</a></span>
   </div>
 
   <div class="submissionDetails">
-      <p>submitted by:&nbsp;{{quote.submitter}},&nbsp; <span> 2 </span> hours ago.</p>
+      <p>submitted by:&nbsp;<span class="text-secondary font-italic">{{quote.submitter}}</span>,&nbsp; <span class="text-secondary"> 2 hours ago.</span></p>
   </div>
 
 </section>
