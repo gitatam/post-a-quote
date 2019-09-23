@@ -1,2 +1,6 @@
 /* avail bootstrap in the application at root level */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+}

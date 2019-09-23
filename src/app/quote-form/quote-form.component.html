@@ -1,36 +1,36 @@
 <section>
     <p>Before adding a new quote please first do a search and make sure it doesn't already exist in the database.</p>
     <form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote()'>
-      <div>
-        <label for="quote">quote&nbsp;<span>(No need for quotation marks)</span></label>
-        <textarea id="quoteText" rows="4" [(ngModel)] = "newQuote.quote" #quote = 'ngModel' name="quote" required></textarea>
-        <div [hidden] = "quote.valid || quote.pristine">
+      <fieldset class="form-group">
+        <label for="quote">quote&nbsp;<small class="form-text d-inline-block text-muted">(No need for quotation marks)</small></label>
+        <textarea class="form-control" id="quoteText" rows="4" [(ngModel)] = "newQuote.quote" #quote = 'ngModel' name="quote" required></textarea>
+        <div class="text-warning" [hidden] = "quote.valid || quote.pristine">
           <p>Quote is required.</p>
         </div>
-      </div>
+      </fieldset>
     
-      <div>
-        <label for="author">author&nbsp;<span>(Start typing for auto-complete. Only put the name please.)</span></label>
-        <input type="text" id="author" [(ngModel)] = 'newQuote.author' #author = 'ngModel' name="author" required>
-        <div [hidden] = "author.valid || author.pristine">
+      <fieldset class="form-group">
+        <label for="author">author&nbsp;<small class="form-text d-inline-block text-muted">(Start typing for auto-complete. Only put the name please.)</small></label>
+        <input class="form-control" type="text" id="author" [(ngModel)] = 'newQuote.author' #author = 'ngModel' name="author" required>
+        <div class="text-warning" [hidden] = "author.valid || author.pristine">
           <p>Author is required.</p>
         </div>
-      </div>
+      </fieldset>
     
-      <div>
-        <label for="tags">tags&nbsp;<span>(Comma separated: inspirational, science, tech, humor etc. Limit 10)</span></label>
-        <input type="text" id="tags" [(ngModel)] = 'newQuote.tag' #tags = 'ngModel' name="tags" required>
-        <div [hidden] = "tags.valid || tags.pristine">
+      <fieldset class="form-group">
+        <label for="tags">tags&nbsp;<small class="form-text d-inline-block text-muted">(Comma separated: inspirational, science, tech, humor etc. Limit 10)</small></label>
+        <input class="form-control" type="text" id="tags" [(ngModel)] = 'newQuote.tag' #tags = 'ngModel' name="tags" required>
+        <div class="text-warning" [hidden] = "tags.valid || tags.pristine">
             <p>At least one tag is required.</p>
           </div>
-      </div>
+      </fieldset>
 
-      <div>
-        <label for="submitter">submitter&nbsp;<span>(Your name. Otherwise defaults to anonymous.)</span></label>
-        <input type="text" name="submitter" id="submitter" [(ngModel)] = 'newQuote.submitter'>
-      </div>
+      <fieldset class="form-group">
+        <label for="submitter">submitter&nbsp;<small class="form-text d-inline-block text-muted">(Your name. Otherwise defaults to anonymous.)</small></label>
+        <input class="form-control" type="text" name="submitter" id="submitter" [(ngModel)] = 'newQuote.submitter'>
+      </fieldset>
       
-      <button type="submit">Post Quote</button>
+      <button class="btn-warning mb-5" type="submit">Post Quote</button>
       
     </form>
 </section>
